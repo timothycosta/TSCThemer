@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TSCThemer_Example' do
+  pod 'TSCThemer', :path => '../'
+
+  target 'TSCThemer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
