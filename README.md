@@ -20,9 +20,34 @@ it, simply add the following line to your Podfile:
 pod 'TSCThemer'
 ```
 
+## Usage
+
+TSCThemer has only two essential parts.  A simple `Themer` class with a single member variable `index`, and an extension to `NSObject`.
+
+When changing the index a notification is triggered, which executes the blocks registered via the extension.
+
+To add a block use `setTheme()`
+```
+/// Sets a theme on the given object
+///
+/// - Parameters:
+///   - themer: The Themer to use
+///   - index: Corresponds to Themer.index.  Indexes need not be sequential.
+///   - key: For example "TextColor", "Font", "BackgroundColor", "Layout"
+///   - block: A block that will be executed when the theme updates.  Called immediately if indexes match.
+public func setTheme(themer: Themer = Themer.shared, index: Int, key: String, block: ThemeBlock?)
+```
+
+Convenience methods are provided for common UIKit methods such as: `backgroundColor`, `textColor`, `text`, `attributedText`, etc.
+
+```
+self.view.themeBackgroundColor([.red, .blue])
+self.button.themeTintColor([.red, .green])
+```
+
 ## Author
 
-timothycosta, timothycosta@gmail.com
+timothycosta, tim@timothycosta.com
 
 ## License
 
