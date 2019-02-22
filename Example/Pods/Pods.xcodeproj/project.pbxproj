@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CB93C3221B5004700E9B302 /* Dictionary+Themer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB93C3121B5004700E9B302 /* Dictionary+Themer.swift */; };
-		0FAD0CD775E123467C7AFABFBCECEB05 /* UIView+Themer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C304537E537436B75448C99E72B0E /* UIView+Themer.swift */; };
+		0FAD0CD775E123467C7AFABFBCECEB05 /* Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C304537E537436B75448C99E72B0E /* Convenience.swift */; };
 		20A54D907FFD80B93A643880B454D6AA /* TSCThemer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DABCF783303916A9EC1F25B567C17B0B /* TSCThemer-dummy.m */; };
 		35F6864501AEC58326AE0C87BCAEAB97 /* Pods-TSCThemer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FAF24CF07B51173BAE47949BEB092 /* Pods-TSCThemer_Example-dummy.m */; };
 		37631CCD4B4850AEBCC64832E5DBA6D0 /* NSObject+Themer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C816F0F9392F1713583160B474E935 /* NSObject+Themer.swift */; };
@@ -62,7 +62,7 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9878C94F3BE533C27C29894E513760B8 /* Pods-TSCThemer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TSCThemer_Tests-dummy.m"; sourceTree = "<group>"; };
 		9AA32036EF26BC9D4020B934DE8DCF30 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9D8C304537E537436B75448C99E72B0E /* UIView+Themer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Themer.swift"; path = "TSCThemer/Classes/UIView+Themer.swift"; sourceTree = "<group>"; };
+		9D8C304537E537436B75448C99E72B0E /* Convenience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Convenience.swift; path = TSCThemer/Classes/Convenience.swift; sourceTree = "<group>"; };
 		A3C816F0F9392F1713583160B474E935 /* NSObject+Themer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Themer.swift"; path = "TSCThemer/Classes/NSObject+Themer.swift"; sourceTree = "<group>"; };
 		A70AE78B96AB748D78F95E188FFDDBE2 /* TSCThemer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSCThemer-umbrella.h"; sourceTree = "<group>"; };
 		A9E0BBC1E7D544CABE066B3999BA992D /* Pods-TSCThemer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TSCThemer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				0CB93C3121B5004700E9B302 /* Dictionary+Themer.swift */,
 				A3C816F0F9392F1713583160B474E935 /* NSObject+Themer.swift */,
 				05966236077307B291F045B8EEE31DF7 /* Themer.swift */,
-				9D8C304537E537436B75448C99E72B0E /* UIView+Themer.swift */,
+				9D8C304537E537436B75448C99E72B0E /* Convenience.swift */,
 				9FF9CEA09C1F0F374DB42062AE89D7C4 /* Pod */,
 				AF971AD87B6805F9090943CD445BA901 /* Support Files */,
 			);
@@ -391,7 +391,7 @@
 				37631CCD4B4850AEBCC64832E5DBA6D0 /* NSObject+Themer.swift in Sources */,
 				94A22032A0E3B51708724EBF06EBABC6 /* Themer.swift in Sources */,
 				20A54D907FFD80B93A643880B454D6AA /* TSCThemer-dummy.m in Sources */,
-				0FAD0CD775E123467C7AFABFBCECEB05 /* UIView+Themer.swift in Sources */,
+				0FAD0CD775E123467C7AFABFBCECEB05 /* Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

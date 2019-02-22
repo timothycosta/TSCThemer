@@ -19,7 +19,10 @@ extension Notification.Name {
 			NotificationCenter.default.post(name: .ThemerDidUpdate, object: self)
 		}
 	}
+}
 
+// MARK: Convenience methods
+extension Themer {
 	func set(index: Int, duration: TimeInterval = 0.25, completion: ((Bool) -> Void)? = nil) {
 		UIView.animate(withDuration: duration, animations: {
 			self.index = index

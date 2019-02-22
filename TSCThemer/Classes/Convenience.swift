@@ -1,24 +1,12 @@
 //
-//  UIView+Themer.swift
-//  Pods-TSCThemer_Example
+//  Convenience.swift
+//  TSCThemer
 //
 //  Created by Timothy Costa on 11/30/18.
 //
 
 import Foundation
 import UIKit
-
-extension NSObject {
-	public func setThemes<T>(with objects: [T], selector:Selector, themer: Themer = Themer.shared) {
-		assert(self.responds(to: selector), "Invalid selector: '\(selector)'")
-		for (idx, val) in objects.enumerated() {
-			self.setTheme(themer: themer, index: idx, key: NSStringFromSelector(selector), block: { (obj) in
-				let _ = obj.perform(selector, with: val)
-			})
-		}
-	}
-
-}
 
 extension UIView {
 	public func themeBackgroundColor(_ colors: [UIColor]) {
