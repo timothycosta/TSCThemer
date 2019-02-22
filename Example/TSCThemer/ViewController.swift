@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 		let tintColors = [UIColor.red, UIColor.green]
 
 		self.toggle.themeTintColor(tintColors)
-		self.toggle.setThemes(with: tintColors, selector: "setOnTintColor:")
+		self.toggle.setThemes(with: tintColors, selector: #selector(setter: UISwitch.onTintColor))
 		self.toggle.isOn = false
 
 		self.segmentedControl.themeTintColor(tintColors)
@@ -33,6 +33,11 @@ class ViewController: UIViewController {
 
 		self.label.themeTextColors([.black, .white])
 		self.label.themeText(["Toggle Random Views", "Turn Random Views On or Off"])
+
+		self.setTheme(index: ThemerAlways, key: "Always") { (obj) in
+			let name = Themer.shared.pick(["Light", "Dark"], default: "")
+			print("This gets called every time!  Current theme: \(name)")
+		}
     }
 
 	lazy var randomViews: [UIView] = {

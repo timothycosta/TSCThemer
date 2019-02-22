@@ -8,6 +8,7 @@
 import Foundation
 
 public typealias ThemeBlock = (AnyObject) -> Void
+public let ThemerAlways = Int.min
 
 private typealias Keyer = [String : ThemeBlock]
 private typealias Indexer = [Int:Keyer]
@@ -21,12 +22,12 @@ public extension NSObject {
 	///
 	/// - Parameters:
 	///   - themer: The Themer to use
-	///   - index: Corresponds to Themer.index
+	///   - index: Corresponds to Themer.index.  Pass ThemerAlways to apply this theme before every change.  For example if something really needs to be calculated each update.
 	///   - key: For example "TextColor", "Font", "BackgroundColor", "Layout"
 	///   - block: A block that will be executed when the theme updates.  Called immediately if indexes match.
 	public func setTheme(themer: Themer = Themer.shared, index: Int, key: String, block: ThemeBlock?) {
 		self.themes[themer, orAdd: [:] ][index, orAdd: [:] ][key] = block
-		if themer.index == index {
+		if themer.index == index || index == ThemerAlways {
 			block?(self)
 		}
 	}
@@ -73,6 +74,11 @@ fileprivate extension NSObject {
 
 	@objc fileprivate func tscUpdateTheme(_ notification: Notification) {
 		guard let themer = notification.object as? Themer else { return }
+
+		let always = self.themes[themer]?[ThemerAlways] ?? [:]
+		for theme in always.values {
+			theme(self)
+		}
 
 		let keyer = self.themes[themer]?[themer.index] ?? [:]
 		for theme in keyer.values {
