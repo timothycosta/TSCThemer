@@ -23,9 +23,17 @@ extension Notification.Name {
 
 // MARK: Convenience methods
 extension Themer {
-	func set(index: Int, duration: TimeInterval = 0.25, completion: ((Bool) -> Void)? = nil) {
+	public func set(index: Int, duration: TimeInterval = 0.25, completion: ((Bool) -> Void)? = nil) {
 		UIView.animate(withDuration: duration, animations: {
 			self.index = index
 		}, completion: completion)
+	}
+
+	public func pick<V>(_ objects: [V]) -> V? {
+		return self.index < objects.count ? objects[self.index] : nil
+	}
+
+	public func pick<V>(_ objects: [V], default defaultValue: V) -> V {
+		return self.pick(objects) ?? defaultValue
 	}
 }
